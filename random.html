@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="navbar"></div>
+
+    <div id="dish"></div>
+</body>
+</html>
+
+<script type="module">
+
+    import navbar from  './components/header.js'
+    // console.log(navbar)
+
+    let header = document.getElementById("navbar")
+
+    header.innerHTML=navbar();
+
+    let parent = document.getElementById("dish");
+
+    import {getData, append} from "./scripts/fetchAppend.js";
+    // console.log(getData,append)
+
+    let response = await getData(`https://www.themealdb.com/api/json/v1/1/random.php`)
+
+    console.log(response);
+
+    append(response,parent);
+
+</script>
