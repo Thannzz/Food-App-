@@ -9,7 +9,7 @@
 #header{
     height: auto;
     width: 80%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     margin: auto;
     display: flex;
     justify-content:space-around;
@@ -25,7 +25,7 @@ img{
 
 #dish
 {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     width: 80%;
     margin: auto;
     text-align: center;
